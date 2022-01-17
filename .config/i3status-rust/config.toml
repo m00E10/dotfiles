@@ -1,0 +1,75 @@
+[[block]]
+block = "focused_window"
+max_width = 20
+show_marks = "visible"
+[block.theme_overrides]
+idle_fg = "#a8a8a8"
+
+[[block]]
+block = "custom"
+command = "curl https://am.i.mullvad.net/json | jq | grep city | tr -d '\"' | cut -c 9- | tr -d ','"
+interval = 120
+[block.theme_overrides]
+idle_fg = "#54fcfc"
+
+# [[block]]
+# block = "net"
+# device = "eth0"
+# format = "{speed_down;K*b} {graph_down;}"
+# interval = 5
+# [block.theme_overrides]
+# idle_fg = "#54fcfc"
+
+[[block]]
+block = "custom"
+command = "sused=$(free -m | awk '{ print $3}' | tail -1); stotal=$(free -m | awk '{ print $2}' | tail -1); echo \"SWAP  $sused/$stotal\";"
+interval = 30
+[block.theme_overrides]
+idle_fg = "#1CC454"
+
+[[block]]
+block = "memory"
+format_mem = "({mem_used_percents})"
+format_swap = "{swap_used}/{swap_total}({swap_used_percents})"
+display_type = "memory"
+icons = true
+clickable = true
+interval = 5
+[block.theme_overrides]
+idle_fg = "#5454fc"
+
+[[block]]
+block = "cpu"
+interval = 1
+format = "{barchart} {utilization} {frequency}"
+interval = 5
+[block.theme_overrides]
+idle_fg = "#a800a8"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "used"
+format = "{icon} {used}/{total}"
+[block.theme_overrides]
+critical_fg = "#fc5454"
+
+[[block]]
+block = "sound"
+format = "{volume}"
+[block.theme_overrides]
+idle_fg = "#a85400"
+
+[[block]]
+block = "custom"
+command = "acpi -V | grep % | head -1 | cut -d \" \" -f 4 | cut -f1 -d ,"
+interval = 60
+[block.theme_overrides]
+idle_fg = "#a80000"
+
+[[block]]
+block = "custom"
+command = "date | head -c 23"
+interval = 1
+[block.theme_overrides]
+idle_fg = "#a8a8a8"

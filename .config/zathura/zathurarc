@@ -1,0 +1,9 @@
+set recolor-darkcolor "#CC8818"
+set recolor-lightcolor "#000000"
+set recolor true
+set zoom-step 5
+set scroll-step 50
+set guioptions none
+
+set scroll-page-aware true
+set window-height 900

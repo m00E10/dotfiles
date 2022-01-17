@@ -1,0 +1,21 @@
+# Kickoff default config
+
+# Characters shown in front of the query.
+prompt = '$ '
+
+# space between window border and the content in pixel
+padding = 20
+
+font = 'iPortfolio'  # otf or ttf only
+font_size = 8
+
+[history]
+decrease_interval = 150       # interval to decrease the number of launches
+
+[colors]
+# color format: rgb or rgba, if transparency is desired
+background = '#000000'
+prompt = '#abb2bfff'
+text = '#cc8818'           # for search results
+text_query = '#a8a8a8'     # for the search query
+text_selected = '#a80000'  # for the currently selected result

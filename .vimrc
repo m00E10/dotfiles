@@ -1,61 +1,61 @@
-" My vimrc config. 
-
-" Automatically close brackets
-" Honestly I just find this annoying. Id rather just close my damn brackets than
-" break my fucking wrist finding the arrow/home key to get past the placed
-" bracket. In IDE land the placed brackets are moved past when placing a closing
-" bracket. I dont know if theres any way to do that in vim. Probably is tbh
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
+" My vimrc config, feel free to use it if you'd like
 
 " Have vim colors be different from terminal defaults
 hi Normal ctermfg=7 ctermbg=0
+
 " Fix for backspace issue in XTerm
 set backspace=2
+
 " Bottom right col/row numbers
 set ruler
+
 " Enable line numbers, toggle with ctrl+n
 set number
+
 " Ctrl+n in normal mode toggles line numbers
 :nmap <C-N> :set invnumber<CR>
+
 " set paste mode toggle with F2
 set pastetoggle=<F2>
+
 " Make vim default yanks to system clipboard, copy with Y or yy
 " In visual mode copy/paste to xclip || wl-copy clipboard with ctrl+@ & ctrl+R
 :nmap <C-@> :w !wl-copy -n
 " xnoremap <silent> <C-@> :w !wl-copy -p -n
 " xnoremap <silent> <C-@> :w !xclip -i -sel p -f \| xclip -i -sel c<CR><CR>
+
 " Enable syntax highlighting
 syntax enable
 syntax on
 filetype plugin indent on
+
 " Make tabs a series of spaces
 set expandtab
 " Make tabs 2 spaces long
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
 " On return, keep indent of previous line
 set autoindent
+
 " Cool vertical line at column 81
 set colorcolumn=81
 " Automatically return a line when text goes past column 80
 set tw=80
+
 " Disable line wrapping
 set nowrap
 " Ctrl+L to toggle line wrap
 nmap <C-L> :set wrap!<CR>
+
 " Ctrl+S to spellcheck, z= to get suggestions, ]s & [s cycle through words
 :setlocal nospell
 nmap <C-S> :setlocal spell!<CR>
 "setlocal spell commented out because spellcheck should be off by default imo
 set spell spelllang=en_us
 set spellfile=~/.vim/spell/en.utf-8.add
+
 " Themeing for line numbers
 highlight LineNr term=bold cterm=NONE ctermfg=LightYellow ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 " Enable cursor line
@@ -64,12 +64,21 @@ set cursorline
 set cursorlineopt=number
 " Themeing for current line number
 highlight CursorLineNr cterm=bold term=bold gui=bold ctermfg=1
-" Syntax highlighting for your .notes
+
+" Syntax highlighting for .notes
 au BufRead,BufNewFile *.notes set filetype=notes
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
-" Periodically save currently opened file
-"autocmd CursorHold,CursorHoldI * update 100
+
+" Automatically close brackets and things
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 
 " Provides super and subscript functionality in vim, as an example, to
 " superscript 4, one would press ctrl+k -> 4 -> S, or s for subscript
@@ -171,4 +180,3 @@ vnoremap <C-c> "*y
 "}}}
 
 "   if more special chars are needed, consult https://vimhelp.org/digraph.txt.html
-

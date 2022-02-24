@@ -57,7 +57,7 @@ set spell spelllang=en_us
 set spellfile=~/.vim/spell/en.utf-8.add
 
 " Themeing for line numbers
-highlight LineNr term=bold cterm=NONE ctermfg=LightYellow ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight LineNr term=bold cterm=NONE ctermfg=LightGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 " Enable cursor line
 set cursorline
 " Only highlight the line NUMBER, dont underline the whole line
@@ -180,3 +180,4 @@ vnoremap <C-c> "*y
 "}}}
 
 "   if more special chars are needed, consult https://vimhelp.org/digraph.txt.html
+

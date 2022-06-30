@@ -1,7 +1,7 @@
 # Kickoff default config
 
 # Characters shown in front of the query.
-prompt = '$ '
+prompt = '$  '
 
 # space between window border and the content in pixel
 padding = 20

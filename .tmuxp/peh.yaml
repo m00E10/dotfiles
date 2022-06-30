@@ -1,0 +1,23 @@
+session_name: peh
+windows:
+- focus: 'true'
+  layout: cd5d,86x68,0,0,0
+  options: {}
+  panes:
+  - pane
+  start_directory: /home/me/Desktop/notes/PEH
+  window_name: bash
+- layout: cd5e,86x68,0,0,1
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: bash
+  start_directory: /home/me/Desktop/notes
+  window_name: bash
+- layout: cd5f,86x68,0,0,2
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: bash
+  start_directory: /home/me/Desktop/notes/ruby
+  window_name: bash

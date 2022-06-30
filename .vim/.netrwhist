@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/etc/apparmor.d'
+let g:netrw_dirhist_4='/home/moo/.nedit'
+let g:netrw_dirhist_3='/home/moo/.config/i3'
+let g:netrw_dirhist_2='/home/moo/go'
+let g:netrw_dirhist_1='/home/moo/Documents/notes/systems/install-artix'
+let g:netrw_dirhist_0='/home/tpc/tmp/fpu-csc.github.io/NEW'
+let g:netrw_dirhist_9='/home/tpc/tmp/fpu-csc.github.io'
+let g:netrw_dirhist_8='/home/tpc/tmp'
+let g:netrw_dirhist_7='/home/tpc/tmp/atmo'
+let g:netrw_dirhist_6='/home/tpc/tmp'

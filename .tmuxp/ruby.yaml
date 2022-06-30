@@ -1,0 +1,15 @@
+session_name: '0'
+windows:
+- focus: 'true'
+  layout: 0e53,240x69,0,0{86x69,0,0,0,73x69,87,0,3,79x69,161,0,2}
+  options: {}
+  panes:
+  - shell_command:
+    - cd /home/me/Documents/notes/ruby/game
+    - vim
+  - shell_command:
+    - cd /home/me
+    - python3
+  - focus: 'true'
+    shell_command: cd /home/me/Documents/notes/ruby/practice-code/rthw
+  window_name: bash

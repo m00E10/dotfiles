@@ -1,0 +1,328 @@
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+argglobal
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=81
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal cursorline
+setlocal cursorlineopt=number
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'notes'
+setlocal filetype=notes
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal listchars=
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=8
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=~/.vim/spell/en.utf-8.add
+setlocal spelllang=en_us
+setlocal spelloptions=
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'notes'
+setlocal syntax=notes
+endif
+setlocal tabstop=2
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=80
+setlocal thesaurus=
+setlocal thesaurusfunc=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal virtualedit=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+1,23fold
+43,49fold
+40,49fold
+51,71fold
+72,128fold
+129,136fold
+137,152fold
+153,177fold
+178,215fold
+216,239fold
+240,318fold
+319,332fold
+50,332fold
+333,337fold
+348,374fold
+375,383fold
+384,406fold
+407,431fold
+432,494fold
+495,504fold
+338,504fold
+511,562fold
+563,604fold
+605,661fold
+662,726fold
+727,731fold
+505,731fold
+737,763fold
+764,841fold
+842,909fold
+910,921fold
+922,929fold
+732,929fold
+930,1124fold
+1132,1150fold
+1151,1179fold
+1180,1190fold
+1191,1197fold
+1198,1231fold
+1232,1243fold
+1125,1243fold
+1256,1269fold
+1270,1290fold
+1291,1318fold
+1319,1323fold
+1324,1328fold
+1329,1365fold
+1366,1435fold
+1436,1449fold
+1244,1449fold
+1455,1475fold
+1476,1491fold
+1492,1498fold
+1499,1511fold
+1512,1538fold
+1539,1555fold
+1450,1556fold
+1569,1576fold
+1577,1607fold
+1608,1628fold
+1629,1650fold
+1557,1650fold
+1658,1670fold
+1671,1709fold
+1710,1728fold
+1729,1745fold
+1746,1759fold
+1760,1795fold
+1651,1796fold
+1810,1833fold
+1834,1979fold
+1980,2014fold
+2015,2032fold
+2033,2042fold
+1797,2043fold
+2111,2137fold
+2138,2164fold
+2165,2173fold
+2174,2214fold
+2215,2222fold
+2044,2222fold
+2236,2249fold
+2250,2277fold
+2278,2299fold
+2300,2318fold
+2319,2350fold
+2351,2364fold
+2365,2380fold
+2381,2396fold
+2223,2397fold
+2404,2411fold
+2412,2435fold
+2436,2471fold
+2472,2479fold
+2480,2484fold
+2485,2494fold
+2398,2495fold
+2500,2505fold
+2506,2514fold
+2515,2530fold
+2531,2536fold
+2537,2546fold
+2547,2562fold
+2563,2570fold
+2496,2571fold
+2597,2611fold
+2622,2650fold
+2651,2667fold
+2669,2749fold
+2750,2855fold
+let &fdl = &fdl
+40
+normal! zo
+43
+normal! zo
+40
+normal! zc
+50
+normal! zo
+51
+normal! zo
+338
+normal! zo
+338
+normal! zc
+505
+normal! zo
+505
+normal! zc
+732
+normal! zo
+732
+normal! zc
+1125
+normal! zo
+1125
+normal! zc
+1244
+normal! zo
+1244
+normal! zc
+1450
+normal! zo
+1450
+normal! zc
+1557
+normal! zo
+1608
+normal! zo
+1629
+normal! zo
+1651
+normal! zo
+1658
+normal! zo
+1797
+normal! zo
+1797
+normal! zc
+2044
+normal! zo
+2223
+normal! zo
+2236
+normal! zo
+2250
+normal! zo
+2278
+normal! zo
+2300
+normal! zo
+2319
+normal! zo
+2365
+normal! zo
+2381
+normal! zo
+2223
+normal! zc
+2398
+normal! zo
+2398
+normal! zc
+2496
+normal! zo
+2496
+normal! zc
+2597
+normal! zo
+let s:l = 2750 - ((140 * winheight(0) + 45) / 91)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 2750
+normal! 01|
+lcd ~/Documents/FA21
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+" vim: set ft=vim :

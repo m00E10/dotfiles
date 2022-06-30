@@ -1,0 +1,7 @@
+# /home/moo/.config/tmuxinator/bsd.yml
+
+name: bsd
+root: ~/
+
+windows:
+  - editor:

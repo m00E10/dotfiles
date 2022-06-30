@@ -3,13 +3,15 @@
 exec pipewire
 exec pipewire-pulse
 exec pipewire-media-session
-exec pactl -- set-sink-volume 0 0%
+exec swaybg -i ~/Documents/pictures/background-worthy/bg.png
 exec doas wg-quick up bridge
+exec doas ip link set mtu 1420 dev eth0
+exec doas ip link set mtu 1420 dev wlan0
 
 #xwayland disable
-set $background ~/.config/sway/bg.png
+# set $background ~/.config/sway/bg.png # Line 199
 focus_follows_mouse no
-#for_window [class="MuPDF"] floating enable, resize set 500 500, move position -0 -0
+for_window [class="MuPDF"] floating enable, resize set 500 500, move position -0 -0
 for_window [app_id="org.pwmt.zathura"] floating enable, move position -0 -0, floating_maximum_size 500 x 500
 seat * hide_cursor 8000
 seat * hide_cursor when-typing enable
@@ -191,13 +193,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-
-
-# Default wallpaper
-output * bg $background fill
 # Example configuration: output HDMI-A-1 resolution 1920x1080 position 1920,0
-output DVI-D-1 resolution 1920x1080@144.001Hz
-#output DVI-D-1 resolution 1024x768@75.029Hz
+# output DVI-D-1 resolution 1920x1080@144.001Hz
 
 ### Idle configuration ########################################################
 # Example configuration:
@@ -215,7 +212,6 @@ output DVI-D-1 resolution 1920x1080@144.001Hz
 bar {
     font pango:iPortfolio 6
     position bottom
-    #swaybar_command i3status-rs /home/o1zc/.config/i3status-rust/config.toml
     status_command i3status-rs ~/.config/i3status-rust/config.toml
 
     # When the status_command prints a new line to stdout, swaybar updates.

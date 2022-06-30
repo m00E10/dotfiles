@@ -1,0 +1,82 @@
+session_name: 'tmx'
+windows:
+- layout: 4688,170x92,0,0{85x92,0,0[85x46,0,0,1,85x45,0,47,17],84x92,86,0[84x46,86,0,3,84x45,86,47,16]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  - 
+  - 
+  - 
+  start_directory: ~/
+  window_name: logs
+
+- layout: 7b9f,170x61,0,0[170x51,0,0,5,170x9,0,52{85x9,0,52,6,84x9,86,52,7}]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'false'
+    shell_command:
+    - clear; echo tunes
+  - shell_command:
+    - cd ~/Documents/music
+    - clear
+  - shell_command:
+    - cd ~/
+    - clear
+  window_name: music
+
+- focus: 'true'
+  layout: cada,170x61,0,0[170x52,0,0{85x52,0,0,0,84x52,86,0,3},170x8,0,53,2]
+  panes:
+  - focus: 'true'
+    shell_command:
+    - v gocal/calendar.go
+  - shell_command:
+    - epy ~/Documents/books/reading/golang.epub 
+  - shell_command:
+  start_directory: ~/Documents/notes/programming/golang/go-bites
+  window_name: progs
+
+- layout: 192f,170x92,0,0{85x92,0,0,10,84x92,86,0,18}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'false'
+    shell_command: 
+    - cd ~/Documents/projects
+    - clear
+  - shell_command: 
+    - cd ~/Documents/notes
+    - clear
+  start_directory: ~/Documents
+  window_name: pwork
+
+- layout: 8df5,170x61,0,0{85x61,0,0,15,84x61,86,0,16}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: v ~/tmp/agenda3.notes
+  - shell_command: v ~/tmp/calendar.txt
+  start_directory: ~/
+  window_name: mwork
+
+- layout: 5f52,170x92,0,0,13
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: htop
+  start_directory: ~/
+  window_name: htop
+
+- layout: 958d,170x61,0,0[170x52,0,0,57,170x8,0,53,60]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: 
+  - 
+  start_directory: ~/
+  window_name: chat
